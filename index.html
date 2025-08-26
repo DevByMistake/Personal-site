@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Yasir Arafat</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-title-line">
+        <a href="#home" class="logo">Yasir <span>Arafat</span>.</a>
+      </div>
+
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <section class="home" id="home">
+        <article class="home__article">
+          <h1 class="home__h1">Hi 👋,</h1>
+          <h2 class="home__h2 nowrap"><span>Yasir Arafat</span> here.</h2>
+          <p class="home__p">
+            I'm a beginner web developer learning to build stuff from scratch
+            (like this site).
+          </p>
+          <p class="home__p">
+            Feel free to explore and see what I'm working on.
+          </p>
+          <button class="btn">
+            <a class="link" href="#contact">Hire Me. 🤗</a>
+          </button>
+        </article>
+
+        <figcaption>
+          <img
+            class="main__img"
+            src="assets/img/dev1.svg"
+            alt="my picture"
+            width="300"
+            height="300"
+            title="profile picture"
+          />
+          <!-- <figcaption class="offscreen">Yasir Arafat</figcaption> -->
+        </figcaption>
+      </section>
+
+      <section class="about" id="about">
+        <figure>
+          <img
+            class="about__img"
+            src="assets/img/dev2.svg"
+            alt="my picture"
+            width="300"
+            height="300"
+            title="profile picture"
+          />
+          <figcaption class="tag center">
+            Not me, but a little close enough. 😄
+          </figcaption>
+        </figure>
+
+        <article class="about__article">
+          <h2 class="about__h2">Who am I?</h2>
+          <p class="about__p">
+            Just a curious human who got fascinated by HTML/CSS and the magic of
+            building something from nothing.
+          </p>
+          <p class="about__p">When I'm not coding, you'll probably find me:</p>
+          <ul class="about__ul">
+            <li>
+              Reading tech blogs i barely understand (but I'm getting there!).
+            </li>
+            <li>Listening to chill Qur'an while staring at my editor.</li>
+            <li>Thinking about cool website I want to build next.</li>
+          </ul>
+          <button class="about__btn">
+            <a href="assets/CV.pdf" download>Check my CV 📄</a>
+          </button>
+        </article>
+      </section>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="projects__h2">Projects</h2>
+      <article class="projects__article">
+        <div class="projects-card">
+          <img src="assets/img/project1.png" alt="project one" />
+          <h3>Portfolio Website</h3>
+          <p>
+            A simple landing page site made entirely with HTML & CSS (you're at
+            it).
+          </p>
+          <p>Learned how to use Flexbox, Grid, and even CSS Animations!</p>
+
+          <button class="btn">Preview Project</button>
+        </div>
+        <div class="projects-card">
+          <img src="assets/img/project2.png" alt="project one" />
+          <h3>The Little Tacos</h3>
+          <p>A simple multi page site made entirely with HTML & CSS.</p>
+          <p>
+            This site was made for The Little Tacos which was founded in 2022.
+          </p>
+          <button class="btn">Preview Project</button>
+        </div>
+        <div class="projects-card">
+          <img src="assets/img/project3.png" alt="project one" />
+          <h3>The Little Tacos</h3>
+          <p>A simple multi page site made entirely with HTML only.</p>
+          <p>Learned how to use links, forms, and even favicon!</p>
+          <button class="btn">Preview Project</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="contact__h2">Contact <span>Me</span>.</h2>
+      <form action="post" class="form">
+        <div class="input-group">
+          <div class="input-box">
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Fullname"
+              name="fullname"
+            />
+            <input type="email" id="email" placeholder="Email" name="email" />
+          </div>
+          <div class="input-box">
+            <input type="number" name="phone" id="phone" />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+            />
+          </div>
+        </div>
+
+        <div class="input-group2">
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__p">
+        Made with 💻 and a lot of 🤔 by Arafat | ©️ All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>
