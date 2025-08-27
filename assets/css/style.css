@@ -70,30 +70,39 @@ body {
 
 /* Header */
 
-.header {
-  position: fixed;
-  width: 100%;
-  height: 10px;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  padding: 4rem 15%;
-  background: rgba(8, 8, 8, 0.3);
-  backdrop-filter: blur(10px);
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  padding: 4rem 15%;
+  backdrop-filter: blur(10px);
+  z-index: 999;
 }
 
-.logo {
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
+}
+
+.navbar-logo {
   color: var(--text-color);
   font-size: 3rem;
   font-weight: 800;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
-.logo:hover {
+.navbar-logo:hover {
   transform: scale(1.1);
 }
 
@@ -103,25 +112,43 @@ span {
   color: transparent;
 }
 
-.header__ul {
+.navbar-container .navbar-menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  gap: 4rem;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-.header__ul a {
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: whitesmoke;
   font-size: 1.8rem;
-  color: var(--text-color);
   font-weight: 500;
-  transition: 0.3s ease-in-out;
-  border-bottom: 3px solid transparent;
+  padding: 3px 20px;
+  transition: all 0.5s ease;
+  white-space: nowrap;
 }
 
-.header__ul a:hover {
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active {
   color: var(--main-color);
-  border-bottom: 2px solid var(--main-color);
+}
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: whitesmoke;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Section */
@@ -360,58 +387,84 @@ section {
 }
 
 /* Media Query */
-@media (max-width: 1285px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
+/* Responsive Design */
+@media (max-width: 880px) {
 
-  .logo {
-    font-size: 2.5rem;
+  .navbar {
+    padding: 2rem 7.5%;
   }
-
-  .header-title-line {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .home {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .main__img {
+  img {
     max-width: 100%;
   }
 
-  .about {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-  }
+  .navbar-container .navbar-menu {
+      display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        background: #210b2c;
+        backdrop-filter: blur(10px);
+    }
 
-  .about__img {
-    max-width: 100%;
-  }
+    .navbar-container .navbar-menu.active {
+        display: flex;
+    }
 
-  .projects {
-    padding: 10%;
-  }
+    .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
 
-  .projects-card {
-    max-width: 100%;
-    overflow: hidden;
-    padding: 5rem;
-  }
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
 
-  .form {
-    flex-direction: column;
-  }
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
 
-  .footer__p {
-    font-size: 14px;
-  }
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .home, .about, .form {
+      flex-direction: column;
+      text-align: center;
+      gap: 5rem;
+    }
+
+    .projects__article {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .contact__h2 {
+      white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 2.5rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.7rem;
+        padding: 3px 20px;
+    }
+
+    .navbar-container .navbar-menu {
+      align-items: center;
+    }
+
 }
