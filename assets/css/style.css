@@ -223,6 +223,8 @@ section {
 
 .about__img {
   width: 50vh;
+  border: 10px double #6f00ff;
+  border-radius: 10px;
 }
 
 .tag {
@@ -386,6 +388,78 @@ section {
   font-size: 16px;
 }
 
+/* Animation */
+
+/* Text Animation */
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view(50% auto);
+  animation-range: entry 20% 100vh;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Animation */
+.imageReveal {
+  animation: imageReveal both;
+  animation-timeline: view(10% 5%);
+}
+
+@keyframes imageReveal {
+  from {
+    filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+    opacity: 0;
+    scale: .95s;
+    translate: 0 4rem;
+  }
+  to {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+/* Card fade Animation */
+
+.fadeUp {
+  animation: fadeUp both;
+  animation-timeline: view();
+}
+
+.projects-card:nth-child(1) {
+  animation-range: entry 20% cover 40%;
+}
+
+.projects-card:nth-child(2) {
+  animation-range: entry 40% cover 60%;
+}
+
+.projects-card:nth-child(3) {
+  animation-range: entry 60% cover 80%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
 /* Media Query */
 /* Responsive Design */
 @media (max-width: 880px) {
@@ -446,6 +520,10 @@ section {
 
     .contact__h2 {
       white-space: nowrap;
+    }
+
+    .footer__p {
+      font-size: 10px;
     }
 }
 

@@ -35,7 +35,7 @@
 
     <section>
       <section class="home" id="home">
-        <article class="home__article">
+        <article class="home__article autoShow">
           <h1 class="home__h1">Hi 👋,</h1>
           <h2 class="home__h2 nowrap"><span>Yasir Arafat</span> here.</h2>
           <p class="home__p">
@@ -66,8 +66,8 @@
       <section class="about" id="about">
         <figure>
           <img
-            class="about__img"
-            src="assets/img/dev2.svg"
+            class="about__img imageReveal"
+            src="assets/img/me.png"
             alt="my picture"
             width="300"
             height="300"
@@ -79,30 +79,30 @@
         </figure>
 
         <article class="about__article">
-          <h2 class="about__h2">Who am I?</h2>
-          <p class="about__p">
+          <h2 class="about__h2 autoShow">Who am I?</h2>
+          <p class="about__p autoShow">
             Just a curious human who got fascinated by HTML/CSS and the magic of
             building something from nothing.
           </p>
-          <p class="about__p">When I'm not coding, you'll probably find me:</p>
-          <ul class="about__ul">
+          <p class="about__p autoShow">When I'm not coding, you'll probably find me:</p>
+          <ul class="about__ul autoShow">
             <li>
               Reading tech blogs i barely understand (but I'm getting there!).
             </li>
             <li>Listening to chill Qur'an while staring at my editor.</li>
             <li>Thinking about cool website I want to build next.</li>
           </ul>
-          <button class="about__btn">
+          <button class="about__btn autoShow">
             <a href="assets/CV.pdf" download>Check my CV 📄</a>
           </button>
         </article>
       </section>
     </section>
 
-    <section class="projects" id="projects">
-      <h2 class="projects__h2">Projects</h2>
+    <section class="projects container" id="projects">
+      <h2 class="projects__h2 autoShow">Projects</h2>
       <article class="projects__article">
-        <div class="projects-card">
+        <div class="projects-card fadeUp">
           <img src="assets/img/project1.png" alt="project one" />
           <h3>Portfolio Website</h3>
           <p>
@@ -113,7 +113,7 @@
 
           <button class="btn">Preview Project</button>
         </div>
-        <div class="projects-card">
+        <div class="projects-card fadeUp">
           <img src="assets/img/project2.png" alt="project one" />
           <h3>The Little Tacos</h3>
           <p>A simple multi page site made entirely with HTML & CSS.</p>
@@ -122,7 +122,7 @@
           </p>
           <button class="btn">Preview Project</button>
         </div>
-        <div class="projects-card">
+        <div class="projects-card fadeUp">
           <img src="assets/img/project3.png" alt="project one" />
           <h3>The Little Tacos</h3>
           <p>A simple multi page site made entirely with HTML only.</p>
@@ -133,20 +133,20 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="contact__h2">Contact <span>Me</span>.</h2>
-      <form action="post" class="form">
+      <h2 class="contact__h2 autoShow">Contact <span>Me</span>.</h2>
+      <form action="https://formsubmit.co/4305d89386ea00e3ef90c5e3fb815164" method="post" class="form">
         <div class="input-group">
           <div class="input-box">
             <input
               type="text"
               id="fullname"
               placeholder="Fullname"
-              name="fullname"
+              name="fullname" required
             />
-            <input type="email" id="email" placeholder="Email" name="email" />
+            <input type="email" id="email" placeholder="Email" name="email" required />
           </div>
           <div class="input-box">
-            <input type="number" name="phone" id="phone" />
+            <input type="number" name="phone" id="phone" required />
             <input
               type="text"
               name="subject"
