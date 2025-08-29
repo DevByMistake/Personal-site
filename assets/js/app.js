@@ -5,3 +5,8 @@ navbarToggle.addEventListener('click', () => {
     navbarToggle.classList.toggle('active');
     navbarMenu.classList.toggle('active');
 })
+
+const year = document.getElementById("year");
+const thisYear = new Date().getFullYear();
+year.setAttribute("datetime", thisYear);
+year.textContent = thisYear;
