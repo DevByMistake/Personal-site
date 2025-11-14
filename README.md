@@ -57,7 +57,7 @@ updateTime();
 
 1.  Download or clone the repository:
 
-        git clone <your-repo-url>
+        https://github.com/DevByMistake/Personal-site.git
 
 2.  Open `index.html` in any web browser.
 
