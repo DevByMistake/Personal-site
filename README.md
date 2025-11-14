@@ -28,11 +28,12 @@ visually appealing and responsive layout.
 
     /
     ├── index.html
-    ├── style.css
-    ├── script.js
+    ├── README.md
     └── assets/
-        ├── images/
-        └── icons/
+        ├── img/
+        ├── css/
+        ├── js/
+        ├── cv
 
 ## ⚙️ JavaScript Functionality
 
