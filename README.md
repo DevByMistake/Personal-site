@@ -2,26 +2,26 @@
 
 A simple and clean personal portfolio website built using **HTML**,
 **CSS**, and a small amount of **JavaScript** to automatically update
-the **current time and date**.\
+the **current time and date**.
 This project showcases my skills, projects, and ways to contact me in a
 visually appealing and responsive layout.
 
 ## 🚀 Features
 
 -   **Responsive Design** -- Works smoothly on desktop, tablet, and
-    mobile devices.\
+    mobile devices.
 -   **Clean UI** -- Minimalistic layout designed for clarity and
-    readability.\
+    readability.
 -   **Auto-Updating Time & Date** -- A lightweight JavaScript script
-    updates the displayed time and date in real time.\
+    updates the displayed time and date in real time.
 -   **Project Showcase** -- Sections dedicated to highlighting my work
-    and accomplishments.\
+    and accomplishments.
 -   **Contact Section** -- Easy ways for visitors to reach out.
 
 ## 🛠️ Technologies Used
 
--   **HTML5** -- Structure and semantic markup\
--   **CSS3** -- Styling, layout, animations\
+-   **HTML5** -- Structure and semantic markup
+-   **CSS3** -- Styling, layout, animations
 -   **JavaScript (Vanilla JS)** -- Real-time date and time functionality
 
 ## 📂 Project Structure
@@ -39,8 +39,8 @@ visually appealing and responsive layout.
 
 The site includes a small script that:
 
--   Fetches the current system time and date\
--   Automatically updates them every second\
+-   Fetches the current system time and date
+-   Automatically updates them every second
 -   Displays them in a predefined format on the webpage
 
 ``` js
