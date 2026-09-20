@@ -531,7 +531,7 @@
     .nav-links, .nav-cta{display:none;}
     .burger{display:flex;}
     .hero .wrap{grid-template-columns:1fr;}
-    .hero-photo{margin:0 auto;max-width:300px;}
+    .hero-photo{margin:0 auto;max-width:300px; margin-top: 10%;}
     .about-grid{grid-template-columns:1fr;}
     .project-row{grid-template-columns:1fr;gap:26px;}
     .contact-panel{grid-template-columns:1fr;padding:40px 26px;}
