@@ -221,6 +221,19 @@
   Made with 💻 and a lot of 🤔 by Yasir Arafat · All rights reserved.
 </footer>
 
+  <script>
+      const burgerBtn = document.getElementById('burgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      burgerBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      burgerBtn.setAttribute('aria-expanded', open);
+  });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  </script>
 <script src="assets/js/app.js></script>
 
 </body>
